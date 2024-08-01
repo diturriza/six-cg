@@ -5,13 +5,12 @@ import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 import Features2 from '~/components/widgets/Features2.astro';
-import Features from '~/components/widgets/Features.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
 
-import { YouTube } from 'astro-embed';
+import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
   ignoreTitleTemplate: true,
@@ -30,18 +29,8 @@ const metadata = {
   >
     <Fragment slot="title">
       Ayudar a los Líderes de TI a tener éxito  <span class="hidden sm:inline">en la Transformación Digital</span> es <span
-      class="text-accent dark:text-white highlight">Nuestra Misión</span>
+      class="text-accent dark:text-white highlight block">Nuestra Misión</span>
     </Fragment>
-    <!-- <Fragment slot="title">
-      Improve <span class="hidden sm:inline">the online presence of</span> your <span
-        class="text-accent dark:text-white highlight">Startup</span
-      > with Astrowind templates
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Step into the spotlight with <span class="font-semibold">Astrowind</span> templates, your pathway to fortifying your
-      startup's digital footprint, fostering credibility, and expanding your reach.
-    </Fragment> -->
   </Hero>
 
   <!-- Features2 Widget ************** -->
@@ -51,22 +40,95 @@ const metadata = {
     subtitle="Somos consultores con más de 20 años de experiencia en informática del negocio petrolero y de otras industrias y poseemos certificaciones internacionales en las áreas de conocimiento que aplicamos."
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Discover the impressive impact of Astrowind"
-    subtitle="The numbers below reflect the trust our users have placed in us and the remarkable outcomes we've helped them achieve."
+    title="Descubre el impresionante impacto de SIX CG"
+    subtitle="Los números reflejan la confianza de nuestros clientes y los resultados notables que hemos logrado juntos."
     stats={[
-      { title: 'Downloads', amount: '182K' },
-      { title: 'Websites Launched', amount: '87' },
-      { title: 'User Ratings', amount: '4.8' },
-      { title: 'Satisfied Clients', amount: '116K' },
+      { title: 'Años de experiencia', amount: '25+' },
+      { title: 'Clientes satisfechos', amount: '30+' },
+      { title: 'Tasa de satisfacción', amount: '95%' },
+      { title: 'Mejoras tangibles', amount: '100%' },
     ]}
   />
+
+  <!-- Features2 Widget *************** -->
+
+  <Features2
+  title="¿Qué servicios ofrecemos?"
+  subtitle="Ofrecemos una amplia gama de servicios que se adaptan a diversas necesidades en la gestión de TI."
+  items={[
+    {
+      title: 'Entonación',
+      description:
+        'Optimización y ajuste de la gestión de servicios de TI para una mayor eficiencia.',
+      icon: 'tabler:artboard',
+    },
+    {
+      title: 'Centros de Atención',
+      description:
+        'Diseño, implementación y asesoría en centros de atención al cliente de TI.',
+      icon: 'tabler:artboard',
+    },
+    {
+      title: 'Estrategias',
+      description:
+        'Consultoría estratégica en tecnologías de la información para potenciar tu negocio.',
+      icon: 'tabler:artboard',
+    },
+    {
+      title: 'Procesos',
+      description:
+        'Implementación y optimización de procesos de servicio de TI.',
+      icon: 'tabler:artboard',
+    },
+    {
+      title: 'Proyectos',
+      description:
+        'Gestión integral de proyectos de TI con un enfoque en resultados.',
+      icon: 'tabler:artboard',
+    },
+    {
+      title: 'Soluciones Project',
+      description:
+        'Implementación y configuración de Microsoft Project Server para una mejor gestión de proyectos.',
+      icon: 'tabler:artboard',
+    },
+    {
+      title: 'Auditorías',
+      description:
+        'Auditorías exhaustivas de calidad en tecnologías de la información.',
+      icon: 'tabler:artboard',
+    },
+    {
+      title: 'Capacitación',
+      description:
+        'Programas de capacitación en habilidades y prácticas de TI.',
+      icon: 'tabler:artboard',
+    },
+    {
+      title: 'Cambio',
+      description:
+        'Preparación y gestión del cambio en entornos de TI.',
+      icon: 'tabler:artboard',
+    },
+    {
+      title: 'Portales',
+      description:
+        'Desarrollo y personalización de portales de gestión en SharePoint.',
+      icon: 'tabler:artboard',
+    },
+  ]}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+  </Fragment>
+</Features2>
 
   <!-- Brands Widget ****************** -->
 
@@ -115,191 +177,100 @@ const metadata = {
     ]}
   />
 
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="What services do we provide?"
-    subtitle="We offer a wide range of website templates that suit various industries and purposes such as business, portfolio, e-commerce, blog, etc."
-    items={[
-      {
-        title: 'Installation Instructions',
-        description:
-          'Offer clear instructions on how to download the purchased templates and install them on various website platforms or content management systems.',
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Demo and Previews',
-        description:
-          'Provide interactive demos and previews that allow customers to see how their chosen template will look and function before making a purchase.',
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Technical Support',
-        description:
-          'Providing customer support for any technical issues related to the templates or their implementation.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="features"
-    title="Main features of our templates"
-    subtitle="Possess several key characteristics to effectively cater to the needs of startups and entrepreneurs."
-    columns={3}
-    items={[
-      {
-        title: 'Modern and Professional Design',
-        description:
-          'Have a contemporary design that reflects current design trends and gives a professional impression.',
-        icon: 'tabler:artboard',
-      },
-      {
-        title: 'Responsive and Mobile-Friendly',
-        description: 'Adapt seamlessly to different screen sizes and devices to ensure a consistent experience.',
-        icon: 'tabler:picture-in-picture',
-      },
-      {
-        title: 'Customizability',
-        description:
-          'Easily customizable, allowing users to adapt the design, colors, typography, and content to match their brand identity.',
-        icon: 'tabler:adjustments-horizontal',
-      },
-      {
-        title: 'Fast Loading Times',
-        description: 'Optimized for speed to ensure a smooth user experience and favorable search engine rankings.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          'Incorporate SEO best practices in template structure and code to improve visibility in search engine results.',
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Compatibility',
-        description: 'The templates work seamlessly across various content management systems and website builders.',
-        icon: 'tabler:plug-connected',
-      },
-    ]}
-  />
-
   <!-- FAQs Widget ******************* -->
-
   <FAQs
-    title="Frequently Asked Questions"
-    items={[
-      {
-        title: 'What are landing page templates?',
-        description:
-          'Landing page templates are pre-designed web page layouts that are specifically created to serve as a foundation for building effective landing pages. These templates are designed to capture the attention of visitors and guide them towards a specific action or goal, such as signing up for a newsletter, making a purchase, or downloading a resource.',
-      },
-      {
-        title: 'Why should I use a template?',
-        description:
-          'Some of the advantages are that they provide a ready-to-use structure,  saving you significant time. Are designed with user-friendliness in mind and provide a cost-effective alternative, saving you money while still delivering a quality result.',
-      },
-      {
-        title: 'Can I preview templates before buying?',
-        description:
-          'Yes, the templates allow you to preview them before making a purchase. There is a "Demo" button associated with each template.',
-      },
-      {
-        title: 'Do I need technical skills to use a template?',
-        description:
-          'Advanced technical skills are not required to use a template, but having a basic understanding of web navigation and familiarity with using online tools can still be beneficial. If you have more specific customization needs, you might need to consult guides or reach out to customer support for assistance.',
-      },
-      {
-        title: 'Can I use the template on multiple websites?',
-        description:
-          'No, the template comes with a single-use license, meaning you can use the template on one website or project only. Using the template on additional websites would require purchasing additional licenses.',
-      },
-      {
-        title: 'What if I need help with customization?',
-        description:
-          "The templates provides a comprehensive step-by-step guide that walk you through the customization process. If you still have doubts, you can reach out to our customer support team. They can answer your questions, provide guidance on customization, and address any issues you're facing.",
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </FAQs>
+  title="Preguntas Frecuentes"
+  items={[
+    {
+      title: '¿Qué servicios ofrece SIX CG en la gestión de TI?',
+      description:
+        'SIX CG ofrece una amplia gama de servicios en la gestión de TI, incluyendo la optimización de la gestión de servicios, diseño y asesoría en centros de atención, consultoría estratégica, implementación y mejora de procesos de servicio, y auditorías exhaustivas de calidad en TI.',
+    },
+    {
+      title: '¿Cómo puede ayudarme SIX CG a mejorar mis procesos de TI?',
+      description:
+        'SIX CG implementa y optimiza procesos de servicio de TI para asegurar una mayor eficiencia y efectividad, adaptándose a las necesidades específicas de cada cliente y garantizando resultados tangibles.',
+    },
+    {
+      title: '¿Qué experiencia tiene SIX CG en la gestión de proyectos de TI?',
+      description:
+        'Con más de 25 años de experiencia, SIX CG se especializa en la gestión integral de proyectos de TI, ofreciendo un enfoque en resultados y una ejecución eficiente para asegurar el éxito de cada proyecto.',
+    },
+    {
+      title: '¿Ofrece SIX CG soluciones específicas para Microsoft Project Server?',
+      description:
+        'Sí, SIX CG se encarga de la implementación y configuración de Microsoft Project Server, facilitando una mejor gestión de proyectos y optimizando el uso de esta herramienta en su organización.',
+    },
+    {
+      title: '¿Qué tipo de capacitación proporciona SIX CG?',
+      description:
+        'SIX CG ofrece programas de capacitación enfocados en el desarrollo de habilidades, aptitudes y prácticas de TI, adaptados a las necesidades del cliente para mejorar su desempeño y conocimiento en el área.',
+    },
+    {
+      title: '¿Cómo asegura SIX CG la calidad en sus auditorías de TI?',
+      description:
+        'SIX CG realiza auditorías exhaustivas de calidad en tecnologías de la información, revisando y evaluando cada aspecto para garantizar que se cumplen los más altos estándares y se identifican áreas de mejora.',
+    },
+  ]}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+  </Fragment>
+</FAQs>
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Let us know how we can help"
-    subtitle="We’re here to help and answer any question you might have."
-    columns={4}
-    items={[
-      {
-        title: 'Phone',
-        icon: 'tabler:phone',
-        callToAction: {
-          target: '_blank',
-          text: 'Call us',
-          href: '/',
-          variant: 'link',
-        },
-      },
-      {
-        title: 'Email',
-        icon: 'tabler:mail',
-        callToAction: {
-          target: '_blank',
-          text: 'Write to us',
-          href: '/',
-          variant: 'link',
-        },
-      },
-      {
-        title: 'Chat with sales',
-        icon: 'tabler:message-circle',
-        callToAction: {
-          target: '_blank',
-          text: 'Start chatting',
-          href: '/',
-          variant: 'link',
-        },
-      },
-      {
-        title: 'Chat with support',
-        icon: 'tabler:message-circle',
-        callToAction: {
-          target: '_blank',
-          text: 'Start chatting',
-          href: '/',
-          variant: 'link',
-        },
-      },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
+  classes={{
+    items: {
+      panel: 'justify-center'
+    }
+  }}
+  title="¿Cómo podemos ayudarte?"
+  subtitle="Estamos aquí para ayudar y responder cualquier pregunta que puedas tener."
+  columns={2}
+  items={[
+    {
+      title: 'Teléfono',
+      icon: 'tabler:phone',
+      callToAction: {
         target: '_blank',
-        text: 'Get templates',
-        href: 'https://github.com/onwidget/astrowind',
-        icon: 'tabler:download',
+        text: '+573195876103',
+        href: 'tel:+573195876103',  // Reemplaza con el número de teléfono real
+        variant: 'link',
       },
-    ]}
-  >
-    <Fragment slot="title">Be a part of our vision</Fragment>
+    },
+    {
+      title: 'Email',
+      icon: 'tabler:mail',
+      callToAction: {
+        target: '_blank',
+        text: 'info@six-cg.com',
+        href: 'mailto:info@six-cg.com',  // Reemplaza con el correo electrónico real
+        variant: 'link',
+      },
+    },
+    
+  ]}
+/>
 
-    <Fragment slot="subtitle">
-      Discover a dynamic work environment, unparalleled growth opportunities, and the chance to make a meaningful
-      impact.
-    </Fragment>
-  </CallToAction>
+<!-- CallToAction Widget *********** -->
+
+<CallToAction
+  actions={[
+    {
+      variant: 'primary',
+      target: '_blank',
+      text: 'Contáctanos',
+      href: getPermalink('/contacto'),  // Reemplaza con el enlace real de contacto
+      icon: 'tabler:phone-call',
+    },
+  ]}
+>
+  <Fragment slot="title">Impulsa tu negocio con nuestras soluciones de TI</Fragment>
+
+  <Fragment slot="subtitle">
+    Descubre cómo nuestras consultorías y servicios en tecnologías de la información pueden optimizar tus procesos y mejorar tu productividad. Contáctanos hoy mismo para una asesoría personalizada.
+  </Fragment>
+</CallToAction>
 </Layout>
