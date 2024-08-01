@@ -29,6 +29,21 @@ export const headerData = {
 export const footerData = {
   links: [
     {
+      title: '',
+      links: []
+    },
+    {
+      title: '',
+      links: []
+    },
+    {
+      title: 'Política de Privacidad - Colombia',
+      links: [
+        { text: 'Política de Tratamiento de Datos Personales', href: getPermalink('/politica-tratamiento-datos-personales') },
+        { text: 'Aviso de Privacidad', href: getPermalink('/aviso-privacidad') },
+      ]
+    },
+    {
       title: 'Sitemap',
       links: [
         { text: 'Nosotros', href: getPermalink('/nosotros') },
@@ -38,10 +53,7 @@ export const footerData = {
       ],
     },
   ],
-  secondaryLinks: [
-    { text: 'Política de Tratamiento de Datos Personales', href: getPermalink('/politica-tratamiento-datos-personales') },
-    { text: 'Aviso de Privacidad', href: getPermalink('/aviso-privacidad') },
-  ],
+  secondaryLinks: [],
   socialLinks: [
     { ariaLabel: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/six-cg/' },
   ],
