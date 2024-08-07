@@ -7,7 +7,7 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'Nosotros',
 };
 ---
 
@@ -15,61 +15,59 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="About us"
+    tagline="Acerca de Nosotros"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      src: '/images/six-cg-logo.png', // Reemplaza con la ruta de la imagen sin fondo de SIX CG
+      alt: 'SIX CG Logo',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span>
+      Ayudamos a los líderes de TI a <br />
+      <span class="text-accent dark:text-white highlight"> Tener Éxito</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      Nuestra misión es "Ayudar a los Líderes de TI a tener éxito" entregándoles resultados significativos y duraderos y transfiriéndoles conocimientos, prácticas y experiencia de valor.
     </Fragment>
   </Hero>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title="Sobre nosotros en cifras"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'Años de experiencia', amount: '20+' },
+      { title: 'Certificaciones', amount: '12' },
+      { title: 'Clientes satisfechos', amount: '100+' },
+      { title: 'Proyectos completados', amount: '500+' },
     ]}
   />
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    title="Nuestros Servicios"
+    subtitle="Ofrecemos una amplia gama de servicios en la gestión de proyectos y servicios de TI."
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: 'Educational',
+        title: 'Consultoría en Procesos',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+          'Ofrecemos consultoría especializada en procesos de negocio y TI, asegurando la optimización y eficiencia.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Interior Design',
+        title: 'Gestión de Proyectos',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          'Gestionamos proyectos complejos con metodologías ágiles y certificaciones internacionales.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Photography',
+        title: 'Soluciones ITIL',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
+          'Implementamos y gestionamos servicios de TI bajo los estándares ITIL para asegurar la calidad y eficiencia.',
+        icon: 'tabler:globe',
       },
     ]}
   />
@@ -81,99 +79,102 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'E-commerce',
+        title: 'Capacitación',
         description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
+          'Brindamos capacitación en diversas áreas, incluyendo ITIL, PMP, CBCP, CISA y más.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Blog',
+        title: 'Coaching Organizacional',
         description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
+          'Facilitamos procesos de cambio organizacional con técnicas de coaching certificadas.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Business',
+        title: 'Auditorías de TI',
         description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
+          'Realizamos auditorías exhaustivas de sistemas y procesos para garantizar la seguridad y eficiencia.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Branding',
+        title: 'Soluciones MS Project',
         description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
+          'Implementamos y gestionamos Microsoft Project Server y SharePoint para una mejor colaboración y gestión de proyectos.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Medical',
+        title: 'Continuidad del Negocio',
         description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
+          'Desarrollamos planes de continuidad del negocio para asegurar la resiliencia y recuperación ante desastres.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Fashion Design',
+        title: 'Soporte Técnico',
         description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
+          'Ofrecemos soporte técnico especializado para resolver cualquier problema de TI de manera eficiente.',
+        icon: 'tabler:globe',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
+      alt: 'Image representing our services',
     }}
   />
 
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    title="Nuestros Valores"
+    subtitle="Los valores que nos guían en nuestra misión de ayudar a los líderes de TI a tener éxito."
     items={[
       {
-        title: 'Customer-centric approach',
+        title: 'Trabajo en Equipo',
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
-      },
-      {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
-      },
-      {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      },
-    ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
+          'Promovemos un ambiente colaborativo y de apoyo mutuo para alcanzar objetivos comunes.',
         icon: 'tabler:globe',
       },
       {
-        title: 'Positive customer feedback and reviews',
+        title: 'Mejora Continua',
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
+          'Nos mantenemos actualizados y buscamos constantemente nuevas formas de mejorar nuestros servicios.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: 'Prácticas Éticas',
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
+          'Actuamos con integridad y transparencia en todas nuestras relaciones y proyectos.',
+        icon: 'tabler:globe',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Logros"
+    subtitle="Nuestros principales logros y reconocimientos en la industria."
+    isReversed={true}
+    callToAction={{
+      text: 'Ver más',
+      href: '/logros',
+    }}
+    items={[
+      {
+        title: 'Alcance Global',
+        description: 'Hemos expandido nuestros servicios a múltiples países en Latinoamérica y el Caribe.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Comentarios Positivos',
+        description:
+          'Recibimos continuamente feedback positivo de nuestros clientes, destacando nuestra calidad y eficiencia.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Premios y Reconocimientos',
+        description:
+          'Hemos sido reconocidos como expertos en la industria y hemos recibido varios premios por nuestra excelencia.',
+        icon: 'tabler:globe',
       },
     ]}
   />
@@ -181,48 +182,31 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Our locations"
-    tagline="Find us"
+    title="Nuestras Ubicaciones"
+    tagline="Encuéntranos"
     columns={4}
     items={[
       {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
+        title: 'Colombia',
+        description: 'Carrera 11 #138-48, Apto 805, Bogotá',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
+        title: 'Venezuela',
+        description: 'Av. Francisco de Miranda, Torre Europa, Caracas',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
+        title: 'Latinoamérica',
+        description: 'Oficinas en diversos países de Latinoamérica y el Caribe.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+        title: 'Online',
+        description: 'Atención y servicios remotos disponibles en cualquier lugar.',
+        icon: 'tabler:globe',
       },
     ]}
   />
 
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
-    columns={2}
-    items={[
-      {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
-      },
-    ]}
-  />
 </Layout>

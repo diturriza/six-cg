@@ -1,28 +1,14 @@
 import { getPermalink } from './utils/permalinks';
 
-export const headerData = {
-  links: [
-    {
-      text: 'Inicio',
-      href: getPermalink('/'),
-    }, {
-      text: 'Sobre nosotros',
-      href: getPermalink('/nosotros'),
-    },
-    {
-      text: 'Servicios',
-      href: getPermalink('/servicios'),
-    },
-    {
-      text: 'Casos de éxito',
-      href: getPermalink('/servicios'),
-    },
-    {
-      text: 'Contáctanos',
-      href: getPermalink('/contacto'),
-    },
+const sitemap = [
+  { text: 'Inicio', href: getPermalink('/') },
+  { text: 'Nosotros', href: getPermalink('/nosotros') },
+  { text: 'Servicios', href: getPermalink('/servicios') },
+  { text: 'Contacto', href: getPermalink('/contacto') },
+];
 
-  ],
+export const headerData = {
+  links: sitemap,
   actions: [{ text: 'Solicita Asesoría', href: getPermalink('/contacto'), target: '_blank' }],
 };
 
@@ -45,12 +31,7 @@ export const footerData = {
     },
     {
       title: 'Sitemap',
-      links: [
-        { text: 'Nosotros', href: getPermalink('/nosotros') },
-        { text: 'Servicios', href: getPermalink('/servicios') },
-        { text: 'Casos de éxito', href: getPermalink('/casos-exito') },
-        { text: 'Contacto', href: getPermalink('/contacto') },
-      ],
+      links: sitemap,
     },
   ],
   secondaryLinks: [],

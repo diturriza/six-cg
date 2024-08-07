@@ -3,86 +3,86 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Services',
+  title: 'Servicios',
 };
 ---
-
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Services"
-    title="Elevate your projects with our stunning templates"
-    subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
-    actions={[{ variant: 'primary', target: '_blank', text: 'Start exploring', href: '/' }]}
+    tagline="Servicios"
+    title="Impulsa tus proyectos con nuestras soluciones especializadas"
+    subtitle="Explora nuestras soluciones meticulosamente diseñadas para diversas industrias y propósitos. Desde la gestión de proyectos hasta servicios de TI, ofrecemos las herramientas que necesitas para tener éxito."
+    actions={[{ variant: 'primary', target: '_blank', text: 'Comienza ahora', href: '/' }]}
     image={{
       src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'AstroWind Hero Image',
+      alt: 'SIX CG Hero Image',
     }}
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Explore our diverse templates"
-    subtitle="Discover our selection below to streamline and elevate your projects."
+    title="Explora nuestras diversas soluciones"
+    subtitle="Descubre nuestras soluciones para optimizar y elevar tus proyectos."
     columns={3}
     items={[
       {
-        title: 'Educational',
+        title: 'Consultoría en Procesos',
         description:
-          'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
-        icon: 'tabler:school',
+          'Ofrecemos consultoría especializada en procesos de negocio y TI, asegurando la optimización y eficiencia.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Interior Design',
+        title: 'Gestión de Proyectos',
         description:
-          'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-        icon: 'tabler:home-star',
+          'Gestionamos proyectos complejos con metodologías ágiles y certificaciones internacionales.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Photography',
-        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-        icon: 'tabler:photo',
-      },
-      {
-        title: 'E-commerce',
+        title: 'Soluciones ITIL',
         description:
-          'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-        icon: 'tabler:shopping-cart',
+          'Implementamos y gestionamos servicios de TI bajo los estándares ITIL para asegurar la calidad y eficiencia.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Blog',
+        title: 'Capacitación',
         description:
-          'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-        icon: 'tabler:article',
+          'Brindamos capacitación en diversas áreas, incluyendo ITIL, PMP, CBCP, CISA y más.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Business',
+        title: 'Coaching Organizacional',
         description:
-          'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-        icon: 'tabler:building-store',
+          'Facilitamos procesos de cambio organizacional con técnicas de coaching certificadas.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Branding',
+        title: 'Auditorías de TI',
         description:
-          'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-        icon: 'tabler:arrow-big-up-lines',
+          'Realizamos auditorías exhaustivas de sistemas y procesos para garantizar la seguridad y eficiencia.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Medical',
-        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-        icon: 'tabler:vaccine',
-      },
-      {
-        title: 'Fashion Design',
+        title: 'Soluciones MS Project',
         description:
-          'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-        icon: 'tabler:tie',
+          'Implementamos y gestionamos Microsoft Project Server y SharePoint para una mejor colaboración y gestión de proyectos.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Continuidad del Negocio',
+        description:
+          'Desarrollamos planes de continuidad del negocio para asegurar la resiliencia y recuperación ante desastres.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Soporte Técnico',
+        description:
+          'Ofrecemos soporte técnico especializado para resolver cualquier problema de TI de manera eficiente.',
+        icon: 'tabler:globe',
       },
     ]}
   />
@@ -93,28 +93,28 @@ const metadata = {
     isReversed
     items={[
       {
-        title: 'High-Quality Designs',
+        title: 'Diseños de Alta Calidad',
         description:
-          'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
-        icon: 'tabler:wand',
+          'Nuestras soluciones presentan diseños de alta calidad que aseguran una apariencia profesional y pulida para tus proyectos.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Customization Tools',
+        title: 'Herramientas de Personalización',
         description:
-          'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
-        icon: 'tabler:settings',
+          'Personaliza cada solución según tus necesidades únicas con herramientas fáciles de usar que te permiten adaptar colores, fuentes y contenido.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Pre-Designed Elements',
+        title: 'Elementos Prediseñados',
         description:
-          'Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.',
-        icon: 'tabler:presentation',
+          'Ahorra tiempo y esfuerzo con nuestros elementos listos para usar, incluyendo gráficos, iconos y diseños que mejoran el atractivo visual de tus creaciones.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Preview and Mockup Views',
+        title: 'Vistas Previas y Mockups',
         description:
-          'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.',
-        icon: 'tabler:carousel-horizontal',
+          'Visualiza el resultado final antes de realizar cualquier cambio utilizando nuestras vistas previas y mockups, asegurando que tus proyectos cumplan con tus expectativas.',
+        icon: 'tabler:globe',
       },
     ]}
     image={{
@@ -123,7 +123,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Principales Características</h3>
     </Fragment>
   </Content>
 
@@ -133,28 +133,28 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Time Savings',
+        title: 'Ahorro de Tiempo',
         description:
-          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
-        icon: 'tabler:clock',
+          'Optimiza tu flujo de trabajo, permitiéndote crear materiales impresionantes de manera eficiente y dedicar más tiempo a tus tareas principales.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Professional Appearance',
+        title: 'Apariencia Profesional',
         description:
-          'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.',
-        icon: 'tabler:school',
+          'Eleva tus proyectos con la apariencia pulida y sofisticada que nuestras soluciones proporcionan, causando una impresión duradera en tu audiencia.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Cost-Efficiency',
+        title: 'Eficiencia de Costos',
         description:
-          'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.',
-        icon: 'tabler:coin',
+          'Benefíciate de ahorros de costos al evitar la necesidad de trabajos de diseño personalizados, ya que nuestras soluciones ofrecen diseños de grado profesional a una fracción del costo.',
+        icon: 'tabler:globe',
       },
       {
-        title: 'Instant Download',
+        title: 'Descarga Instantánea',
         description:
-          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
-        icon: 'tabler:file-download',
+          'Disfruta de acceso inmediato a tus soluciones elegidas tras la compra, permitiéndote comenzar a trabajar en tus proyectos sin demora.',
+        icon: 'tabler:globe',
       },
     ]}
     image={{
@@ -163,50 +163,9 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Beneficios</h3>
     </Fragment>
   </Content>
-
-  <!-- Testimonials Widget *********** -->
-
-  <Testimonials
-    title="Words from real customers"
-    testimonials={[
-      {
-        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
-        name: 'Emily Kennedy',
-        job: 'Front-end developer',
-        image: {
-          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-          alt: 'Emily Kennedy Image',
-        },
-      },
-      {
-        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
-        name: 'Sarah Hansen',
-        job: 'Photographer',
-        image: {
-          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Sarah Hansen Image',
-        },
-      },
-      {
-        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
-        name: 'Mark Wilkinson',
-        job: 'Small business owner',
-        image: {
-          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
-          alt: 'Mark Wilkinson Image',
-        },
-      },
-    ]}
-    callToAction={{
-      target: '_blank',
-      text: 'More testimonials...',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:chevron-right',
-    }}
-  />
 
   <!-- CallToAction Widget *********** -->
 
@@ -214,11 +173,11 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Start exploring',
+        text: 'Comienza ahora',
         href: '/',
       },
     ]}
-    title="Dive into our template collection"
-    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
+    title="Sumérgete en nuestras soluciones"
+    subtitle="Ya sea que estés en negocios, diseño o educación, nuestras soluciones están aquí para elevar tus proyectos."
   />
 </Layout>
